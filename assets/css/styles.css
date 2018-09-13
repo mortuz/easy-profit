@@ -164,3 +164,56 @@ svg.bottom-right {
         display: block;
     }
 }
+.has-submenu:hover>.sub-menu {
+    display: block;
+    visibility: visible;
+    top: -110px;
+}
+.sub-menu {
+    position: absolute;
+    top: -150px;
+    background-color: #fff;
+    border: 2px solid var(--primary-colour);
+    border-radius: 50px;
+    list-style-type: none;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.15s ease-in;
+    visibility: collapse;
+}
+.has-submenu {
+    position: relative;
+}
+.sub-menu::before {
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    border-width: 16px 16px 0;
+    border-style: solid;
+    border-color: var(--primary-colour) transparent;
+    display: block;
+    width: 0;
+}
+.sub-menu::after {
+    display: block;
+    content: '';
+    border-width: 13px 13px 0;
+    border-style: solid;
+    border-color: #fff transparent; 
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+}
+#bottomNav .sub-menu li a {
+    color: var(--primary-colour);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-decoration: none;
+}
