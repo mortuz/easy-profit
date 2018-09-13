@@ -196,6 +196,7 @@ svg.bottom-right {
 @media (max-width: 991px) {
     svg.bottom-right {
         min-height: 100vh;
+        height: 100%;
     }
     #navTop .btn {
         display: block;
