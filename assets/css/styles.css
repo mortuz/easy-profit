@@ -102,6 +102,7 @@ svg.bottom-right {
 .home-header .btn.btn-primary:active {
     background-color: var(--primary-colour);
     border-color: var(--primary-colour);
+    margin-right: 20px;
 }
 .home-header .btn.btn-outline-primary,
 .home-header .btn.btn-outline-primary:hover,
