@@ -35,6 +35,9 @@ body {
 .home-header {
     min-height: calc(100vh - 88px);
 }
+#navTop {
+    z-index:999;
+}
 #navTop .nav-link {
     padding-left: 20px;
     padding-right: 20px;
@@ -45,12 +48,14 @@ svg.top-left {
     top: 0;
     left: 0;
     max-width: 30vw;
+    z-index: -1;
 }
 svg.bottom-right {
     position: absolute;
     top: 0;
     right: 0;
     height: calc(100vh - 88px);
+    z-index: -1;
 }
 .content {
     display: flex;
@@ -89,6 +94,7 @@ svg.bottom-right {
     border-radius: 50px;
     padding-left: 50px;
     padding-right: 50px;
+    margin-bottom: 10px;
     color: #fff;
 }
 .home-header .btn.btn-primary,
@@ -148,4 +154,12 @@ svg.bottom-right {
     display: block;
     margin-top: -25px;
     padding-top: 25px;
+}
+@media (max-width: 991px) {
+    svg.bottom-right {
+        min-height: 100vh;
+    }
+    #navTop .btn {
+        display: block;
+    }
 }
