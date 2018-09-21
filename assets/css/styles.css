@@ -33,7 +33,7 @@ body {
     color: #fff;
 }
 .home-header {
-    min-height: calc(100vh - 88px);
+    min-height: calc(100vh - 93px);
 }
 #navTop {
     z-index:999;
@@ -42,7 +42,43 @@ body {
     padding-left: 20px;
     padding-right: 20px;
 }
-
+#navTop .navbar-brand {
+    position: relative;
+    width: 162px;
+    height: 60px;
+}
+#navTop .navbar-brand .logo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#navTop .navbar-brand .logo.logo-front {
+    left: 44px;
+    transition: all 0.32s ease;
+}
+#navTop .navbar-brand .logo.logo-back {
+    transform: rotateY(180deg);
+    opacity: 0;
+    transition: all 0.32s ease;
+}
+#navTop .navbar-brand.is-hover .logo.logo-front {
+    transform: rotateY(-180deg);
+    opacity: 0;
+}
+#navTop .navbar-brand.is-hover .logo.logo-back {
+    transform: rotateY(0deg);
+    opacity: 1;
+}
+.dropdown-menu {
+    background-color: transparent;
+}
+.dropdown-item:hover {
+    color: #16181b;
+    text-decoration: none;
+    background-color: transparent;
+}
 svg.top-left {
     position: absolute;
     top: 0;
@@ -54,7 +90,7 @@ svg.bottom-right {
     position: absolute;
     top: 0;
     right: 0;
-    height: calc(100vh - 88px);
+    height: calc(100vh - 99px);
     z-index: -1;
 }
 .content {
@@ -132,6 +168,7 @@ svg.bottom-right {
     width: auto;
     height: 20px;
     max-width: 100%;
+    transform: scale(0.8);
 }
 #bottomNav {
     background-color: var(--primary-colour);
@@ -159,6 +196,7 @@ svg.bottom-right {
 @media (max-width: 991px) {
     svg.bottom-right {
         min-height: 100vh;
+        height: 100%;
     }
     #navTop .btn {
         display: block;
