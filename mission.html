@@ -53,10 +53,10 @@
               <a class="btn btn-buy shadow" href="#">Buy now</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Buy Game Supplies for the Event</a>
+              <a class="nav-link" href="#" data-toggle="modal" data-target=".game-suplies-modal">Buy Game Supplies for the Event</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Host a Game at your Event</a>
+              <a class="nav-link" href="#" data-toggle="modal" data-target=".host-event-modal">Host a Game at your Event</a>
             </li>
           </ul>
         </div>
@@ -100,23 +100,23 @@
       <div class="collapse navbar-collapse" id="navbarNavBollom">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item has-submenu">
-            <a class="nav-link" href="#">Instructions</a>
+            <a class="nav-link active" href="#">Instructions</a>
             <ul class="sub-menu">
-              <li><a href="#">Region</a></li>
-              <li><a href="#">Grossery</a></li>
+              <li><a href="./region.html">Region</a></li>
+              <li><a href="./glossary.html">Grossery</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Where to buy?</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="./where-to-buy.html">Where to buy?</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="./index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Mission</a>
+            <a class="nav-link" href="./contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./mission.html">Mission</a>
           </li>
         </ul>
       </div>
@@ -124,7 +124,95 @@
 
   </nav>
 
+<!-- Modal -->
+<div class="modal fade game-suplies-modal" id="game-suplies-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Buy game Supplies for event</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="">
 
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="event">Event name</label>
+            <input type="text" name="event" id="event" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea type="text" name="message" id="message" class="form-control"></textarea>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-primary-outline" data-dismiss="modal">Close</button> -->
+        <button type="button" class="btn btn-primary">Request</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/.modal-->
+
+<!-- Modal -->
+<div class="modal fade host-event-modal" id="game-suplies-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Host a game at your event</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="event">Event name</label>
+            <input type="text" name="event" id="event" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea type="text" name="message" id="message" class="form-control"></textarea>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+        <button type="button" class="btn btn-primary">Request</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/.modal-->
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
