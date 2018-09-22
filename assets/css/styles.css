@@ -255,3 +255,20 @@ svg.bottom-right {
     padding-bottom: 20px;
     text-decoration: none;
 }
+
+/* instructions page styling starts here */
+#instructions{
+    line-height: 27px;
+    padding-top: 60px;
+}
+.heading{
+    font-size: 25px;
+}
+.sub-heading{
+    font-size: 22px;
+}
+.beginning-the-game{
+    margin-left: 15px;
+}
+/* instructions page styling ends here */
+
