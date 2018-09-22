@@ -351,3 +351,38 @@ svg.bottom-right {
     border: 0px solid transparent !important;
 }
 /* region page styling */
+.modal-header {
+    background-color: #202945;
+    color: #fff;
+}
+.modal .btn-primary {
+    background-color: var(--accent-colour);
+    border-color: var(--accent-colour);
+    border-radius: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff;
+}
+.modal .btn-primary-outline {
+    background-color: #fff;
+    border-color: var(--primary-colour);
+    color: var(--primary-colour);
+    border-radius: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    color: #fff;
+}
+.close:not(:disabled):not(.disabled):hover {
+    color: #fff;
+    text-decoration: none;
+    opacity: .75;
+}
