@@ -207,6 +207,14 @@ svg.bottom-right {
     visibility: visible;
     top: -110px;
 }
+li.nav-item.has-submenu::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    top: -40px;
+}
 .sub-menu {
     position: absolute;
     top: -150px;
