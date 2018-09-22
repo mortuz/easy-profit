@@ -89,11 +89,42 @@
         </svg>
 
         <div class="container-fluid">
-            <div class="row vertical-center height-500">
-                
-
+            <div class="row">
                 <!-- content here -->
-                
+
+                <div class="col-md-8 offset-md-2">
+
+                    <div class="table-responsive my-5">
+                        <table class="table" id="region-table">
+                    
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="transparent no-border"></th>
+                                    <th scope="col" class="transparent border-bottom no-y-border"></th>
+                                    <th scope="col" class="transparent border-bottom"></th>
+                                    <th scope="col" class="transparent border-bottom"></th>
+                                    <th scope="col" class="transparent border-bottom"></th>
+                                    <th scope="col" colspan="3" class="border-top border-right border-left">Revenue per contact</th>
+                                </tr>
+                                <tr>
+                                    <th scope="col" class="border-left transparent border-bottom border-right no-top-border no-left-border"></th>
+                                    <th scope="col">City</th>
+                                    <th scope="col">Busniess type</th>
+                                    <th scope="col">vehicle payment</th>
+                                    <th scope="col">vehicle loan</th>
+                                    <th scope="col">Declining</th>
+                                    <th scope="col">Stable</th>
+                                    <th scope="col" class="border-right">Growing</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                            </tbody>
+                    
+                        </table>
+                    </div>
+
+                </div>
 
             </div>
         </div>
@@ -139,8 +170,287 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
     <script src="./assets/js/particles.min.js"></script>
-    <!-- <script src="http://threejs.org/examples/js/libs/stats.min.js"></script> -->
     <script src="./assets/js/app.js"></script>
+
+    <script>
+        var data = `
+ALBUQUERQUE
+ATLANTA
+BALTIMORE
+BATON ROUGE
+BILLINGS
+BIRMINGHAM
+BOISE
+BOSTON
+CHARLOTTE
+CHICAGO
+COLUMBUS
+DALLAS
+DENVER
+DES MOINES
+DETROIT
+FARGO
+HOUSTON
+JACKSONVILLE
+KANSAS CITY
+LAS VEGAS
+LOS ANGELES
+MEMPHIS
+MIAMI
+MILWAUKEE
+MINNEAPOLIS
+NEW ORLEANS
+NEW YORK
+OKLAHOMA CITY
+ORLANDO
+PHILADELPHIA
+PHOENIX
+PORTLAND
+SALT LAKE CITY
+SAN DIEGO
+SEATTLE
+ST. PAUL
+LAWN MOWING
+HOUSE CLEANING
+PET WASTE CLEANUP
+WINDOW CLEANING
+AIR DUCT CLEANING
+CHIMNEY SWEEPING
+PRESSURE WASHING
+WINDOW TINTING
+HOME INSPECTION
+TREE PRUNING & CARE
+HOME STAGING
+HANDYMAN
+PRODUCE DELIVERY
+MOBILE MASSAGE
+MOBILE CHIROPRACTOR
+MOBILE OIL CHANGE
+POOL SERVICE
+PEST CONTROL
+LAWN FERTILIZATION
+LIGHT MAINTENANCE
+ALARM SYSTEMS
+BLIND CLEANING
+FLOOR CLEANING
+COMPUTER REPAIR
+DRY CLEANING
+LAWN MOWING
+WINDOW CLEANING
+HOME STAGING
+MOBILE MASSAGE
+PEST CONTROL
+COMPUTER REPAIR
+MOBILE OIL CHANGE
+PET WASTE CLEANUP
+LAWN FERTILIZATION
+PRODUCE DELIVERY
+HANDYMAN
+$250
+$500
+$450
+$435
+$450
+$400
+$350
+$425
+$420
+$450
+$400
+$350
+$375
+$375
+$350
+$300
+$450
+$300
+$300
+$500
+$575
+$300
+$450
+$300
+$475
+$300
+$500
+$400
+$475
+$400
+$350
+$475
+$400
+$500
+$450
+$400
+$16,250
+$32,500
+$29,250
+$28,275
+$29,250
+$26,000
+$22,750
+$27,625
+$27,300
+$29,250
+$26,000
+$22,750
+$24,375
+$24,375
+$22,750
+$19,500
+$29,250
+$19,500
+$19,500
+$32,500
+$37,375
+$19,500
+$29,250
+$19,500
+$30,875
+$19,500
+$32,500
+$26,000
+$30,875
+$26,000
+$22,750
+$30,875
+$26,000
+$32,500
+$29,250
+$26,000
+$150
+$300
+$200
+$150
+$200
+$150
+$100
+$200
+$200
+$200
+$200
+$200
+$150
+$100
+$150
+$150
+$250
+$150
+$100
+$200
+$300
+$150
+$200
+$150
+$300
+$150
+$300
+$200
+$200
+$100
+$200
+$200
+$200
+$300
+$200
+$200
+$200
+$400
+$300
+$200
+$300
+$200
+$250
+$300
+$250
+$300
+$300
+$300
+$200
+$175
+$200
+$250
+$300
+$200
+$175
+$300
+$400
+$250
+$300
+$200
+$400
+$200
+$400
+$250
+$300
+$175
+$250
+$250
+$250
+$400
+$250
+$300
+$250
+$500
+$500
+$300
+$500
+$250
+$350
+$400
+$300
+$400
+$400
+$400
+$250
+$250
+$250
+$300
+$500
+$300
+$250
+$500
+$500
+$350
+$400
+$300
+$500
+$250
+$500
+$300
+$400
+$250
+$300
+$300
+$300
+$500
+$300
+$400
+
+        `;
+
+        var html = '';
+
+        console.log(data.split('\n'));
+        var dataArr = data.split('\n');
+        dataArr.shift();
+        for(var i = 0; i < 36; i++) {
+            html += `
+                <tr>
+                    <th scope="row" class="pink-bg border-left">${i+1}</th>
+                    <td class="dark-blue-bg">${dataArr[i]}</td>
+                    <td class="light-blue-bg">${dataArr[i + 36]}</td>
+                    <td class="light-grey-bg">${dataArr[i + 36*2]}</td>
+                    <td class="light-grey-bg">${dataArr[i + 36*3]}</td>
+                    <td class="lighter-blue-bg">${dataArr[i + 36*4]}</td>
+                    <td class="lighter-blue-bg">${dataArr[i + 36*5]}</td>
+                    <td class="lighter-blue-bg border-right">${dataArr[i + 36*6]}</td>
+                </tr>
+            `;
+        }
+        $('#region-table').find('tbody').html(html);
+        console.log(html)
+    </script>
 </body>
 
 </html>
