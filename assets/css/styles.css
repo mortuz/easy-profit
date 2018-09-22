@@ -394,3 +394,29 @@ li.nav-item.has-submenu::before {
     text-decoration: none;
     opacity: .75;
 }
+
+.swiper-container {
+    width: 100%;
+    padding-top: 200px;
+    padding-bottom: 50px;
+}
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 380px;
+    background: #fff;
+}
+.swiper-slide .img-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.swiper-slide .img-container img{
+    width: 100%;
+}
+
+.swiper-slide .info {
+    box-sizing: border-box;
+    padding: 20px;
+}
