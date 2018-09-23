@@ -403,9 +403,14 @@ li.nav-item.has-submenu::before {
 .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 400px;
+    width: 500px;
     /* height: 420px; */
     background: transparent;
+}
+@media (max-width: 600px) {
+    .swiper-slide {
+        width: 320px;
+    }
 }
 .swiper-slide .img-container {
     width: 100%;
