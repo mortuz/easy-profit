@@ -207,6 +207,14 @@ svg.bottom-right {
     visibility: visible;
     top: -110px;
 }
+li.nav-item.has-submenu::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    top: -40px;
+}
 .sub-menu {
     position: absolute;
     top: -150px;
@@ -263,12 +271,152 @@ svg.bottom-right {
 }
 .heading{
     font-size: 25px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 .sub-heading{
     font-size: 22px;
+    margin-top: 1.8rem;
 }
 .beginning-the-game{
     margin-left: 15px;
 }
+.gameboard-legend-list li {
+    margin-bottom: 1rem;
+}
 /* instructions page styling ends here */
 
+/* region page styling */
+#region-table {
+    border-bottom: 4px solid #202945;
+    text-align: center;
+    border-top: none;
+}
+#region-table  thead{
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#region-table thead th{
+    border: 3px solid #fff;
+    background-color: #00C4B3;
+}
+#region-table .pink-bg {
+    background-color: #ff8e9f;
+    text-align: center;
+    border: 3px solid #fff;
+}
+#region-table .dark-blue-bg {
+    background-color: #202945;
+    color: #fff;
+}
+#region-table .light-blue-bg {
+    background-color: #92C0E9;
+    color: #202945;
+    font-weight: bold;
+    border: 3px solid #fff;
+}
+#region-table .light-grey-bg {
+    background-color: #E6E7E7;
+    color: #000;
+    border: 3px solid #fff;
+}
+#region-table .lighter-blue-bg {
+    background-color: #D9E8F7;
+    color: #000;
+    border: 3px solid #fff;
+}
+#region-table .transparent {
+    background-color: transparent;
+}
+#region-table .border-bottom {
+    border-top-color: transparent;
+    border-bottom: 4px solid #202945 !important;
+}
+#region-table .border-top {
+    border-top: 4px solid #202945 !important;
+}
+#region-table .border-left {
+    border-left: 4px solid #202945 !important;
+}
+#region-table .border-right {
+    border-right: 4px solid #202945 !important;
+}
+#region-table .no-y-border {
+    border-left: 0;
+    border-right: 0 solid transparent;
+}
+#region-table tbody .border-left {
+    border-left: 7px solid #202945 !important;
+}
+#region-table .no-left-border {
+    border-left: 0px solid transparent !important;
+}
+#region-table .no-top-border {
+    border-top: 0px solid transparent !important;
+}
+#region-table .no-border {
+    border: 0px solid transparent !important;
+}
+/* region page styling */
+.modal-header {
+    background-color: #202945;
+    color: #fff;
+}
+.modal .btn-primary {
+    background-color: var(--accent-colour);
+    border-color: var(--accent-colour);
+    border-radius: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff;
+}
+.modal .btn-primary-outline {
+    background-color: #fff;
+    border-color: var(--primary-colour);
+    color: var(--primary-colour);
+    border-radius: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    color: #fff;
+}
+.close:not(:disabled):not(.disabled):hover {
+    color: #fff;
+    text-decoration: none;
+    opacity: .75;
+}
+
+.swiper-container {
+    width: 100%;
+    padding-top: 200px;
+    padding-bottom: 50px;
+}
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    /* height: 420px; */
+    background: transparent;
+}
+.swiper-slide .img-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.swiper-slide .img-container img{
+    width: 100%;
+}
+
+.swiper-slide .info {
+    box-sizing: border-box;
+    padding: 20px;
+}
