@@ -12,10 +12,12 @@ document.write(
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav d-lg-none">
-                        <li class="nav-item${page == 'home' ? ' active' : '' }">
+                        <li class="nav-item${page == "home" ? " active" : ""}">
                             <a class="nav-link" href="./index.html">Home</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown${
+                          page == "instructions" ? " active" : ""
+                        }">
                             <!-- <a class="nav-link" href="#">Instructions</a> -->
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
@@ -29,14 +31,18 @@ document.write(
                                 <a class="dropdown-item" href="./glossary.html">Glossary</a>
                             </div>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item${
+                          page == "whereToBuy" ? " active" : ""
+                        }">
                             <a class="nav-link" href="./where-to-buy.html">Where to buy?</a>
                         </li>
                         
-                        <li class="nav-item">
+                        <li class="nav-item${
+                          page == "contact" ? " active" : ""
+                        }">
                             <a class="nav-link" href="./contact.html">Contact</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item${page == "mission" ? " active" : ""}">
                             <a class="nav-link" href="./mission.html">Mission</a>
                         </li>
                     </ul>
