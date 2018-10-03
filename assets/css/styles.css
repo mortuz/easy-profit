@@ -205,7 +205,7 @@ svg.bottom-right {
 .has-submenu:hover>.sub-menu {
     display: block;
     visibility: visible;
-    top: -110px;
+    top: -180px;
 }
 li.nav-item.has-submenu::before {
     content: '';
@@ -222,14 +222,15 @@ li.nav-item.has-submenu::before {
     border: 2px solid var(--primary-colour);
     border-radius: 50px;
     list-style-type: none;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     left: 50%;
     transform: translateX(-50%);
     transition: all 0.15s ease-in;
     visibility: collapse;
+    width: 300px;
 }
 .has-submenu {
     position: relative;
@@ -439,4 +440,7 @@ li.nav-item.has-submenu::before {
     .glossary-page #particles {
         display: none;
     }
+}
+.cards-page .home-header {
+    min-height: calc(100vh - 88px);
 }
