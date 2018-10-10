@@ -444,3 +444,11 @@ li.nav-item.has-submenu::before {
 .cards-page .home-header {
     min-height: calc(100vh - 88px);
 }
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    border-radius: 50px;
+    background-color: var(--primary-colour);
+    color: #fff;
+}
+.nav-pills .nav-link {
+    color: var(--primary-colour);
+}
