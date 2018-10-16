@@ -408,8 +408,16 @@ li.nav-item.has-submenu::before {
 
 .swiper-container {
     width: 100%;
-    padding-top: 200px;
+    padding-top: 100px;
     padding-bottom: 50px;
+}
+
+.swiper-container .description {
+    padding: 10px;
+    text-align: center;
+}
+.swiper-container-sales .description {
+    background-color: #ffdde2;
 }
 .swiper-slide {
     background-position: center;
