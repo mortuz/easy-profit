@@ -429,6 +429,9 @@ li.nav-item.has-submenu::before {
     /* height: 420px; */
     background: transparent;
 }
+.navbar {
+        z-index: 99999999;
+}
 @media (max-width: 600px) {
     .swiper-slide {
         width: 320px;
