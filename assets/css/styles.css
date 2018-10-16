@@ -416,8 +416,11 @@ li.nav-item.has-submenu::before {
     padding: 10px;
     text-align: center;
 }
-.swiper-container-sales .description {
-    background-color: #ffdde2;
+.swiper-container-sales .swiper-slide-active .description {
+    background-color: #e8e8e8;
+}
+.swiper-container-game .swiper-slide-active .description {
+    background-color: #ffe7ef;
 }
 .swiper-slide {
     background-position: center;
