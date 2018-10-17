@@ -40,7 +40,7 @@
         </svg>
 
         <div class="container">
-            <div class="row vertical-center height-500">
+            <div class="row vertical-center height-900">
                 <div class="col-md-12">
 
                     <ul class="nav nav-pills justify-content-center mt-5" id="pills-tab" role="tablist">
@@ -313,6 +313,8 @@
                                 <!-- <div class="swiper-pagination"></div> -->
 
                             </div>
+
+                            <div class="card-description sales-card-description"></div>
                         </div>
                         <div class="tab-pane fade" id="pills-company-cards" role="tabpanel" aria-labelledby="pills-profile-tab">
                             <div class="swiper-container swiper-container-game">
@@ -535,6 +537,7 @@
                                 <!-- <div class="swiper-pagination"></div> -->
 
                             </div>
+                            <div class="card-description game-card-description"></div>
                         </div>
                     </div>
 
@@ -662,26 +665,44 @@
                 slideShadows: false,
             },
             pagination: {
-                el: '.swiper-pagination1',
+                // el: '.swiper-pagination1',
             },
+            on: {
+                slideChange: function (e) {
+                    console.log(this);
+                    // $salesActiveCard = $('.swiper-container-sales').find('.swiper-slide-active');
+                    var currentIndex = this.activeIndex;
+                    var isSalesCard = this.$el.hasClass('swiper-container-sales');
+                    var isGameCard = this.$el.hasClass('swiper-container-game');
+                    
+                    if (isSalesCard) {
+                        $cardDescriptionArea = $('.sales-card-description');
+                        if (currentIndex == 0) {
+                            $cardDescriptionArea.css('opacity', 0);
+                            
+                        } else {
+                            $cardDescriptionArea.css('opacity', 1);
+                            $currentContent = $('.swiper-container-sales').find('.swiper-slide').eq(currentIndex);
+                            var slideText = $currentContent.find('.description').html();
+                            $cardDescriptionArea.html(slideText)
+                        }
+
+                    } else if (isGameCard) {
+                        $cardDescriptionArea = $('.game-card-description');
+                        if (currentIndex == 0) {
+                            $cardDescriptionArea.css('opacity', 0);
+                        } else {
+                            $cardDescriptionArea.css('opacity', 1);
+                            $currentContent = $('.swiper-container-game').find('.swiper-slide').eq(currentIndex);
+                            var slideText = $currentContent.find('.description').html();
+                            $cardDescriptionArea.html(slideText)
+                        }
+
+                    }
+                }
+            }
         });
 
-        // var swiper = new Swiper('.swiper-container2', {
-        //         effect: 'coverflow',
-        //         grabCursor: true,
-        //         centeredSlides: true,
-        //         slidesPerView: 'auto',
-        //         coverflowEffect: {
-        //             rotate: 10,
-        //             stretch: 0,
-        //             depth: 400,
-        //             modifier: 2,
-        //             slideShadows: true,
-        //         },
-        //         pagination: {
-        //             el: '.swiper-pagination2',
-        //         },
-        //     });
         $('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
             console.log('here')
             var paneTarget = $(e.target).attr('href');
@@ -691,6 +712,7 @@
                 swiper[paneIndex].update();
             }
         });
+
     </script>
 </body>
 
