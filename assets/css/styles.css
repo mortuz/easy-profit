@@ -439,7 +439,6 @@ li.nav-item.has-submenu::before {
 }
 .card-description {
     padding: 20px;
-    background-color: #fff;
     margin-top: 80px;
     max-width: 600px;
     margin-left: auto;
